@@ -8,6 +8,12 @@ const itemsRoutes = require("./routes/items")
 app.use(express.json());
 app.use("/items", itemsRoutes);
 
+
+router.get("/", function(req, res) {
+  return "who are you?";
+});
+
+
 /** 404 handler */
 
 app.use(function (req, res, next) {
